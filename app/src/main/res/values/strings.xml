@@ -1,0 +1,11 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">Charm</string>
+    <string-array name="categories">
+        <item>Personal Excuse</item>
+        <item>Absence Due To Bussiness</item>
+        <item>Paid Time Off - Pto</item>
+        <item>Sick Days</item>
+        <item>Work From Home</item>
+        <item>Patron Saint Day</item>
+    </string-array>
+</resources>

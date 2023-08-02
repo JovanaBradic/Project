@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Project" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Project" parent="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="colorPrimary">#364b6e</item>
+        <item name="colorPrimaryDark">#364b6e</item>
+    </style>
+
+    <style name="SwitchTheme" parent="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:colorControlActivated">#486391</item>
+    </style>
+
+    <style name="DatePicker" parent="@style/Theme.AppCompat.DayNight.Dialog">
+        <item name="colorAccent">@color/buttonColor</item>
+<!--        <item name="android:textColor">@color/buttonColor</item>-->
+        <item name="android:buttonBarNegativeButtonStyle">@style/ButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/ButtonStyle</item>
+<!--        <item name="android:navigationBarColor">@color/buttonColor</item>-->
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/buttonColor</item>
+    </style>
+
+</resources>

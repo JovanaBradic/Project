@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RequestTimeOffActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- From date -->
+    <TextView
+        android:id="@+id/textFromDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From date"
+        android:textSize="22sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#fc0317"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textFromDate"
+        app:layout_constraintBottom_toBottomOf="@+id/textFromDate"/>
+    <TextView
+        android:id="@+id/dateFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:hint="Select from date"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textFromDate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
+    <!-- From date end -->
+
+    <!-- To date -->
+    <TextView
+        android:id="@+id/textToDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To date"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/toDate"
+        app:layout_constraintBottom_toBottomOf="@+id/textFromDate"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#fc0317"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textToDate"
+        app:layout_constraintStart_toEndOf="@+id/textToDate" />
+    <TextView
+        android:id="@+id/toDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Select to date"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textToDate"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- To date end -->
+
+    <!-- Time off category -->
+    <TextView
+        android:id="@+id/timeOfCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time off category"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/toDate"
+        app:layout_constraintStart_toStartOf="@+id/textFromDate"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#fc0317"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/timeOfCategory"
+        app:layout_constraintBottom_toBottomOf="@+id/timeOfCategory"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/border"
+        app:layout_constraintTop_toBottomOf="@+id/timeOfCategory"/>
+    <!-- Time of category end-->
+
+    <!-- Amount days -->
+    <TextView
+        android:id="@+id/amountDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount -"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/textFromDate"/>
+    <EditText
+        android:id="@+id/amountDaysField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:background="@drawable/border"
+        app:layout_constraintTop_toBottomOf="@id/amountDays"
+        app:layout_constraintStart_toStartOf="@+id/amountDays"
+        android:focusable="true"
+        android:inputType="number"
+        android:focusableInTouchMode="true"
+        />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="#364b6e"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/amountDaysField"
+        app:layout_constraintTop_toTopOf="@+id/amountDaysField"
+        android:enabled="false"
+        />
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#364b6e"
+        android:layout_marginStart="20dp"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/minus"
+        app:layout_constraintTop_toTopOf="@+id/minus"
+        android:enabled="false"
+        />
+    <!-- Amount days end -->
+
+    <!-- Note -->
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:textSize="22sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textFromDate"
+                app:layout_constraintTop_toBottomOf="@+id/amountDaysField"/>
+            <EditText
+                android:id="@+id/noteField"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:maxLength="50"
+                android:background="@drawable/border"
+                app:layout_constraintStart_toStartOf="@+id/note"
+                app:layout_constraintTop_toBottomOf="@+id/note" />
+    <!-- Note end -->
+    <TextView
+        android:id="@+id/fieldRequired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fields with * are required."
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/noteField"
+        app:layout_constraintTop_toBottomOf="@+id/noteField"/>
+    <!-- Button submit -->
+    <Button
+        android:id="@+id/submitRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="Submit request"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fieldRequired" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
